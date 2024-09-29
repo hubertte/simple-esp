@@ -7,6 +7,7 @@ local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
 
 --Properties:
 
@@ -17,7 +18,7 @@ Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.889134526, 0, 0.51611793, 0)
+Frame.Position = UDim2.new(0.614339828, 0, 0.183470458, 0)
 Frame.Size = UDim2.new(0, 123, 0, 270)
 Frame.Active = true
 Frame.Draggable = true
@@ -45,20 +46,73 @@ TextButton.Text = "ESP"
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextSize = 14.000
 
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0, 0, 0.707407415, 0)
+TextButton_2.Size = UDim2.new(0, 123, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "FLY"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 14.000
+
 -- Scripts:
 
-local function BEPBT_fake_script() -- Frame.Script 
+local function GDCK_fake_script() -- Frame.Script 
 	local script = Instance.new('Script', Frame)
 
 	print("Hello world!")
 	
 end
-coroutine.wrap(BEPBT_fake_script)()
-local function ESCZPB_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(GDCK_fake_script)()
+local function NWKA_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local RunService = game:GetService("RunService")
+	local textLabel = script.Parent -- The TextLabel where the rainbow effect will be applied
+	
+	local hue = 0 -- Start at hue 0 (red)
+	
+	-- Function to update the color of the text
+	local function updateRainbowText()
+		-- Increment the hue value
+		hue = (hue + 0.01) % 1 -- Keep the hue between 0 and 1 (it loops back to 0)
+	
+		-- Set the TextLabel color based on the hue
+		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1) -- Full saturation and value for bright colors
+	end
+	
+	-- Continuously update the text color every frame
+	RunService.RenderStepped:Connect(updateRainbowText)
+	
+end
+coroutine.wrap(NWKA_fake_script)()
+local function LZDBG_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
+	
+	
+	
+	
+	
+	local textLabel = script.Parent -- The TextLabel where the rainbow effect will be applied
+	
+	local hue = 0 -- Start at hue 0 (red)
+	
+	-- Function to update the color of the text
+	local function updateRainbowText()
+		-- Increment the hue value
+		hue = (hue + 0.01) % 1 -- Keep the hue between 0 and 1 (it loops back to 0)
+	
+		-- Set the TextLabel color based on the hue
+		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1) -- Full saturation and value for bright colors
+	end
+	
+	-- Continuously update the text color every frame
+	RunService.RenderStepped:Connect(updateRainbowText)
 	
 	local button = script.Parent -- This is the button the script is attached to
 	local isBillboardEnabled = false -- Track if the billboards are enabled or not
@@ -147,9 +201,54 @@ local function ESCZPB_fake_script() -- TextButton.LocalScript
 			end
 		end
 	
-
+		-- Print a message for feedback (optional)
+		if isBillboardEnabled then
+			print("BillboardGui is now ON")
+		else
+			print("BillboardGui is now OFF")
+		end
 	end)
 	
 	
 end
-coroutine.wrap(ESCZPB_fake_script)()
+coroutine.wrap(LZDBG_fake_script)()
+local function VDXHQGV_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	
+	
+	local RunService = game:GetService("RunService")
+	local textLabel = script.Parent -- The TextLabel where the rainbow effect will be applied
+	
+	local hue = 0 -- Start at hue 0 (red)
+	
+	-- Function to update the color of the text
+	local function updateRainbowText()
+		-- Increment the hue value
+		hue = (hue + 0.01) % 1 -- Keep the hue between 0 and 1 (it loops back to 0)
+	
+		-- Set the TextLabel color based on the hue
+		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1) -- Full saturation and value for bright colors
+	end
+	
+	-- Continuously update the text color every frame
+	RunService.RenderStepped:Connect(updateRainbowText)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	local function cr()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+	end
+	
+	
+	textLabel.MouseButton1Click:Connect(cr)
+		
+	
+end
+coroutine.wrap(VDXHQGV_fake_script)()
