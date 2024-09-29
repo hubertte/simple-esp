@@ -17,8 +17,10 @@ Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.0118445922, 0, 0.0137173682, 0)
+Frame.Position = UDim2.new(0.889134526, 0, 0.51611793, 0)
 Frame.Size = UDim2.new(0, 123, 0, 270)
+Frame.Active = true
+Frame.Draggable = true
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -45,14 +47,14 @@ TextButton.TextSize = 14.000
 
 -- Scripts:
 
-local function JVLTCE_fake_script() -- Frame.Script 
+local function BEPBT_fake_script() -- Frame.Script 
 	local script = Instance.new('Script', Frame)
 
 	print("Hello world!")
 	
 end
-coroutine.wrap(JVLTCE_fake_script)()
-local function WXLKQ_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(BEPBT_fake_script)()
+local function ESCZPB_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local Players = game:GetService("Players")
@@ -145,14 +147,9 @@ local function WXLKQ_fake_script() -- TextButton.LocalScript
 			end
 		end
 	
-		-- Print a message for feedback (optional)
-		if isBillboardEnabled then
-			print("BillboardGui is now ON")
-		else
-			print("BillboardGui is now OFF")
-		end
+
 	end)
 	
 	
 end
-coroutine.wrap(WXLKQ_fake_script)()
+coroutine.wrap(ESCZPB_fake_script)()
